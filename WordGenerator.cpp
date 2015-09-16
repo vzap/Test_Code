@@ -8,7 +8,7 @@ int genRand(int min, int max){
 
 	int range = max - min + 1;
 	return( rand() % range + min);
-		
+
 }
 
 
@@ -22,7 +22,7 @@ void storeWords(fstream& myFile, int num,int min, int max, string& alphabet){
 		}
 		myFile << (word + "\n");
 		word = "";
-	}	
+	}
 }
 
 void characterFill(string& holder){
@@ -39,8 +39,11 @@ void characterFill(string& holder){
 int main(){
 	string text;
 	fstream myfile;
+
+	//does the rest of this program work? I don't see it getting called in the main so im not sure.
+	//does this file have anything in it?
 	myfile.open("GenWords.txt", fstream::out | fstream::app);
-		
+
 	while(!myfile.eof()){
 	myfile >> text;
 	cout << text << endl;
